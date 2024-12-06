@@ -1,0 +1,139 @@
+/* تنسيق الجسم */
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/1234.jpg'); /* مسار الصورة الصحيح */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+/* تنسيق الهيدر */
+header {
+    background: rgba(0, 0, 0, 0.7); /* خلفية داكنة للهيدر */
+    padding: 40px;
+    text-align: center;
+    border-bottom: 5px solid #f39c12; /* تغيير اللون إلى الذهبي */
+    border-radius: 0 0 15px 15px; /* إضافة تدوير للزوايا */
+}
+
+/* تنسيق العنوان */
+header h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    color: #f39c12;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* تأثير الظل */
+}
+
+/* تأثير التمرير على العنوان */
+header h1:hover {
+    transform: scale(1.1);
+    color: #f1c40f; /* تغيير اللون إلى الأصفر الفاتح */
+    transition: all 0.3s ease;
+}
+
+/* أزرار فوق الهيدر */
+.top-buttons {
+    margin-top: 30px;
+}
+
+.top-buttons button {
+    background-color: #f39c12; /* اللون الذهبي */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.top-buttons button:hover {
+    background-color: #e67e22; /* اللون البرتقالي الداكن */
+    transform: translateY(-5px);
+}
+
+/* تنسيق أزرار الفيديو */
+.video-buttons {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.video-buttons button {
+    background-color: #1abc9c; /* اللون الأخضر المائل للأزرق */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.video-buttons button:hover {
+    background-color: #16a085; /* درجة داكنة من الأخضر */
+    transform: scale(1.1);
+}
+
+/* تنسيق الفيديو الحالي */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#video-frame {
+    width: 100%;
+    max-width: 750px;
+    height: 420px;
+    border: 3px solid #f39c12; /* اللون الذهبي */
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* تنسيق أزرار التحكم */
+.control-buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.control-buttons button {
+    background-color: #3498db; /* اللون الأزرق */
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.control-buttons button:hover {
+    background-color: #2980b9; /* اللون الأزرق الداكن */
+    transform: scale(1.05);
+}
+
+/* تنسيق الفوتر */
+footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+}

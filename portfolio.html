@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <titleDuaAmer\دعاءعامرو</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl; /* لتنسيق الكتابة من اليمين لليسار */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .video-buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .video-buttons button {
+            background-color: #ff9800;
+            border: none;
+            color: white;
+            padding: 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .video-buttons button:hover {
+            background-color: #e68900;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #video-frame {
+            width: 280px;  /* عرض أصغر */
+            height: 500px; /* ارتفاع أصغر */
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .control-buttons {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        let player;
+
+        // دالة لتحميل YouTube Player API
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('video-frame', {
+                height: '500',
+                width: '280',
+                videoId: 'wgyHailQhm4',  // الفيديو الافتراضي
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        // دالة للتشغيل/الإيقاف
+        function toggleVideo() {
+            if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+                player.pauseVideo();
+            } else {
+                player.playVideo();
+            }
+        }
+
+        // دالة لتخطي 10 ثوانٍ
+        function skipForward() {
+            let currentTime = player.getCurrentTime();
+            player.seekTo(currentTime + 10, true);
+        }
+
+        // دالة عندما يكون المشغل جاهزاً
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+    </script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>فيديوهاتي</h1>
+
+        <!-- أزرار الفيديو -->
+        <div class="video-buttons">
+            <button onclick="player.loadVideoById('wgyHailQhm4')">فيديو 1</button>
+            <button onclick="player.loadVideoById('Syp_wVD-l2k')">فيديو 2</button>
+            <button onclick="player.loadVideoById('tWLdTk2tCKk')">فيديو 3</button>
+            <button onclick="player.loadVideoById('njyscsoDQaw')">فيديو 4</button>
+            <button onclick="player.loadVideoById('qlggKap36GI')">فيديو 5</button>
+        </div>
+
+        <!-- الفيديو الحالي -->
+        <div class="video-container">
+            <div id="video-frame"></div>
+        </div>
+
+        <!-- أزرار التحكم -->
+        <div class="control-buttons">
+            <button onclick="toggleVideo()">تشغيل/إيقاف</button>
+            <button onclick="skipForward()">تخطي 10 ثوانٍ</button>
+        </div>
+    </header>
+
+    <footer class="footer">
+      
+    </footer>
+</body>
+</html>
